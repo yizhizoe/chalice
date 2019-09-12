@@ -151,7 +151,7 @@ class TypedAWSClient(object):
             'Handler': handler,
             'Role': role_arn,
         }  # type: Dict[str, Any]
-        if environment_variables is not None:
+        if environment_variables:
             kwargs['Environment'] = {"Variables": environment_variables}
         if tags is not None:
             kwargs['Tags'] = tags
